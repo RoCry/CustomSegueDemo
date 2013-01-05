@@ -18,6 +18,10 @@
 		D1748E3D16981C9200621218 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1748E3C16981C9200621218 /* Default-568h@2x.png */; };
 		D1748E4016981C9200621218 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1748E3E16981C9200621218 /* MainStoryboard.storyboard */; };
 		D1748E4316981C9200621218 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1748E4216981C9200621218 /* ViewController.m */; };
+		D1748E4F16981CBA00621218 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1748E4C16981CBA00621218 /* JASidePanelController.m */; };
+		D1748E5016981CBA00621218 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = D1748E4E16981CBA00621218 /* UIViewController+JASidePanel.m */; };
+		D1748E5316981DC400621218 /* MenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D1748E5216981DC400621218 /* MenuSegue.m */; };
+		D1748E5516981EC300621218 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1748E5416981EC200621218 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,13 @@
 		D1748E3F16981C9200621218 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		D1748E4116981C9200621218 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D1748E4216981C9200621218 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D1748E4B16981CBA00621218 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
+		D1748E4C16981CBA00621218 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
+		D1748E4D16981CBA00621218 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
+		D1748E4E16981CBA00621218 /* UIViewController+JASidePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JASidePanel.m"; sourceTree = "<group>"; };
+		D1748E5116981DC400621218 /* MenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSegue.h; sourceTree = "<group>"; };
+		D1748E5216981DC400621218 /* MenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSegue.m; sourceTree = "<group>"; };
+		D1748E5416981EC200621218 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1748E5516981EC300621218 /* QuartzCore.framework in Frameworks */,
 				D1748E2716981C9100621218 /* UIKit.framework in Frameworks */,
 				D1748E2916981C9100621218 /* Foundation.framework in Frameworks */,
 				D1748E2B16981C9100621218 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +68,7 @@
 		D1748E1716981C9100621218 = {
 			isa = PBXGroup;
 			children = (
+				D1748E4916981CBA00621218 /* JASidePanels */,
 				D1748E2C16981C9100621218 /* CustomSegueDemo */,
 				D1748E2516981C9100621218 /* Frameworks */,
 				D1748E2316981C9100621218 /* Products */,
@@ -73,6 +86,7 @@
 		D1748E2516981C9100621218 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D1748E5416981EC200621218 /* QuartzCore.framework */,
 				D1748E2616981C9100621218 /* UIKit.framework */,
 				D1748E2816981C9100621218 /* Foundation.framework */,
 				D1748E2A16981C9100621218 /* CoreGraphics.framework */,
@@ -83,6 +97,8 @@
 		D1748E2C16981C9100621218 /* CustomSegueDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D1748E5116981DC400621218 /* MenuSegue.h */,
+				D1748E5216981DC400621218 /* MenuSegue.m */,
 				D1748E3516981C9200621218 /* AppDelegate.h */,
 				D1748E3616981C9200621218 /* AppDelegate.m */,
 				D1748E3E16981C9200621218 /* MainStoryboard.storyboard */,
@@ -105,6 +121,25 @@
 				D1748E3C16981C9200621218 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1748E4916981CBA00621218 /* JASidePanels */ = {
+			isa = PBXGroup;
+			children = (
+				D1748E4A16981CBA00621218 /* Source */,
+			);
+			path = JASidePanels;
+			sourceTree = "<group>";
+		};
+		D1748E4A16981CBA00621218 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D1748E4B16981CBA00621218 /* JASidePanelController.h */,
+				D1748E4C16981CBA00621218 /* JASidePanelController.m */,
+				D1748E4D16981CBA00621218 /* UIViewController+JASidePanel.h */,
+				D1748E4E16981CBA00621218 /* UIViewController+JASidePanel.m */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +211,9 @@
 				D1748E3316981C9200621218 /* main.m in Sources */,
 				D1748E3716981C9200621218 /* AppDelegate.m in Sources */,
 				D1748E4316981C9200621218 /* ViewController.m in Sources */,
+				D1748E4F16981CBA00621218 /* JASidePanelController.m in Sources */,
+				D1748E5016981CBA00621218 /* UIViewController+JASidePanel.m in Sources */,
+				D1748E5316981DC400621218 /* MenuSegue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

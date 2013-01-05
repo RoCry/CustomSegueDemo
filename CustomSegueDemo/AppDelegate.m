@@ -7,12 +7,26 @@
 //
 
 #import "AppDelegate.h"
+#import "JASidePanelController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    UIStoryboard *mainBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    
+    UIViewController *mainViewController = [mainBoard instantiateInitialViewController];
+    
+    JASidePanelController *rootViewController = [[JASidePanelController alloc] init];
+    
+    rootViewController.centerPanel = mainViewController;
+	rootViewController.leftPanel = [mainBoard instantiateViewControllerWithIdentifier:@"MenuViewController"];
+    
+    self.window.rootViewController = rootViewController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							
